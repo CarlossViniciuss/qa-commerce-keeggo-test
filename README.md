@@ -56,7 +56,7 @@ Este repositório contém a automação de testes desenvolvida com **Cypress**, 
 ### 🔧 Instalação
 
 ```bash
-git clone https://github.com/seu-usuario/nome-do-repo.git
+git clone https://github.com/SEU GITHUB/qa-commerce-keeggo-test.git
 cd nome-do-repo
 npm install
 ```
