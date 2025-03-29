@@ -1,5 +1,5 @@
 import { Given, When, Then } from "@badeball/cypress-cucumber-preprocessor";
-import { calcularTotais } from '../../helpers/carrinhoUtils';
+import { calcularTotais } from '../../../helpers/carrinhoUtils';
 
 Given('que estou na página inicial', () => {
   cy.get('h1').should('contain', 'Sua Melhor Experiência de Compra Está Aqui!');

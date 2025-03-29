@@ -1,5 +1,5 @@
 import { Given, When, Then } from "@badeball/cypress-cucumber-preprocessor";
-import { preencherFormulario, validarCamposObrigatorios } from '../../helpers/formUtils';
+import { preencherFormulario, validarCamposObrigatorios } from '../../../helpers/formUtils';
 
 // CENARIO 1
 When("clico em Ir para o Checkout", () => {

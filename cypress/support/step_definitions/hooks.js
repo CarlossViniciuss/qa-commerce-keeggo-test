@@ -1,5 +1,14 @@
 import { Before } from "@badeball/cypress-cucumber-preprocessor";
 
+Before({ tags: "@web" }, () => {
+  cy.visit('/');
+  cy.get('.nav-link').contains('CARRINHO').click();
+
+  limparCarrinho();
+
+  cy.visit('/');
+});
+
 function limparCarrinho() {
   cy.get('body').then(($body) => {
     if ($body.find('#cart-list .remove-from-cart').length > 0) {
@@ -12,12 +21,3 @@ function limparCarrinho() {
     }
   });
 }
-
-Before(() => {
-  cy.visit('/');
-  cy.get('.nav-link').contains('CARRINHO').click();
-
-  limparCarrinho();
-
-  cy.visit('/');
-});

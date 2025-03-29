@@ -13,5 +13,8 @@
     "@bahmutov/cypress-esbuild-preprocessor": "^2.2.4",
     "cypress": "^14.2.1",
     "esbuild": "^0.25.1"
+  },
+  "dependencies": {
+    "cypress-plugin-api": "^2.11.2"
   }
 }

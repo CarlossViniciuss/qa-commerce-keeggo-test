@@ -1,6 +1,6 @@
 # language: pt
 
-@checkout @web
+@checkout @web 
 Funcionalidade: Validar Checkout  
 
 @regressao @simple-checkout

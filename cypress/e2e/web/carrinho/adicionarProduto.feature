@@ -1,6 +1,6 @@
 # language: pt
 
-@carrinho @adicionar-produto
+@carrinho @adicionar-produto @web
 Funcionalidade: Adicionar Produto ao Carrinho
 
 @regressao @smoke @produto-unico

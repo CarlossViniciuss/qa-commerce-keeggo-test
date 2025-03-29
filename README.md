@@ -1,30 +1,143 @@
-# 📦 Testes Automatizados com Cypress + Cucumber
+# 🚀 Cypress + Cucumber | Testes Funcionais Web & API
 
-Este repositório contém testes automatizados de interface (web) utilizando o framework **Cypress** com suporte ao **Cucumber (Gherkin)**, aplicando boas práticas como:
-
-- Reutilização de funções (helpers)
-- Custom Commands
-- Separação por contexto (carrinho, checkout)
-
----
-
-## 🚀 Tecnologias Utilizadas
-
-- [Cypress](https://www.cypress.io/)
-- [@badeball/cypress-cucumber-preprocessor](https://github.com/badeball/cypress-cucumber-preprocessor)
-- Node.js (versão recomendada: **18+**)
+Este repositório contém a automação de testes desenvolvida com **Cypress**, utilizando o **Cucumber (Gherkin)** para escrita dos cenários, seguindo boas práticas como:  
+- Reutilização de código com **Custom Commands**  
+- **Page Objects** e helpers  
+- Separação de contextos Web e API  
+- Cobertura de testes de sucesso e falha  
 
 ---
 
-## ⚙️ Instalação e Configuração
+## 📁 Estrutura do Projeto
 
-1. **Clone o repositório**
+```bash
+.
+├── cypress
+│   ├── e2e
+│   │   ├── api
+│   │   │   ├── getProductsApi.feature
+│   │   │   └── postLoginApi.feature
+│   │   └── web
+│   │       ├── carrinho
+│   │       │   └── adicionarProduto.feature
+│   │       └── checkout
+│   │           └── checkout.feature
+│   ├── support
+│   │   ├── commands.js
+│   │   ├── helpers
+│   │   │   ├── carrinhoUtils.js
+│   │   │   ├── formUtils.js
+│   │   │   └── authUtils.js
+│   │   └── step_definitions
+│   │       ├── api
+│   │           ├── getProductsApi.js
+│   │       │   └── postLoginApi.js
+│   │       ├── web
+│   │       │   ├── carrinho
+│   │       │   └── checkout
+│   │       └── hooks.js
+├── cypress.config.js
+├── package.json
+└── README.md
+```
 
-Execute o servidor local como esta no repositorio: https://github.com/Keeggo-Technology-Brasil-SA/qa-commerce
+---
+
+## 🚀 Como rodar o projeto
+
+### 📦 Pré-requisitos
+
+- Node.js (recomendado: versão LTS)
+- npm
+- Git
+
+### 🔧 Instalação
 
 ```bash
 git clone https://github.com/seu-usuario/nome-do-repo.git
 cd nome-do-repo
 npm install
-npx cypress open
+```
 
+---
+
+## 🧪 Executando os testes
+
+### 🔹 Interface interativa (Cypress UI)
+
+```bash
+npx cypress open
+```
+
+### 🔹 Linha de comando (headless)
+
+```bash
+npx cypress run
+```
+
+### 🔹 Rodar testes por tag
+
+Exemplo: rodar apenas os testes de API
+
+```bash
+npx cypress run --env TAGS="@api"
+```
+
+Você pode combinar tags usando:
+```bash
+--env TAGS="@api and @post"
+--env TAGS="@web and not @erro"
+```
+
+---
+
+## 🧩 Plugins e Ferramentas Utilizadas
+
+- [Cypress](https://www.cypress.io/)
+- [@badeball/cypress-cucumber-preprocessor](https://github.com/badeball/cypress-cucumber-preprocessor)
+- [cypress-plugin-api](https://github.com/filiphric/cypress-plugin-api)
+- [esbuild](https://esbuild.github.io/)
+
+---
+
+## ✅ Testes Web
+
+- 🛒 **Carrinho**  
+  - Adicionar produto único ou múltiplos  
+  - Carrinho vazio  
+  - Validação de totais, contador e paginação
+
+- 💳 **Checkout**  
+  - Finalização de pedido com sucesso  
+  - Validação de mensagens de erro e campos obrigatórios
+
+---
+
+## 🔁 Testes API
+
+- 📦 **GET /api/produtos**  
+  - Listar produtos  
+  - Validação dos campos retornados  
+  - Validação de estrutura da resposta
+
+- 🔐 **POST /api/login**  
+  - Login com sucesso  
+  - Login com erro (credenciais inválidas)  
+  - Testes de validação (campos ausentes, dados inválidos)
+
+---
+
+## 🛠️ Boas Práticas Aplicadas
+
+- Estrutura modular por contexto (Web / API)
+- Reutilização com custom commands
+- Helpers utilitários para formulários, carrinho e autenticação
+- Testes negativos e positivos
+- Uso de `DocString` para bodies dinâmicos em APIs
+- Hooks de limpeza no carrinho
+
+---
+
+## ✍️ Autor
+
+Carlos Vinicius  
