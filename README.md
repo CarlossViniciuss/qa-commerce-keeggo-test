@@ -1,3 +1,5 @@
+![header](https://capsule-render.vercel.app/api?type=waving&color=auto&height=300&section=header&text=Keeggo&fontSize=90&animation=fadeIn&fontAlignY=40)
+
 # 🚀 Cypress + Cucumber | Testes Funcionais Web & API
 
 Este repositório contém a automação de testes desenvolvida com **Cypress**, utilizando o **Cucumber (Gherkin)** para escrita dos cenários, seguindo boas práticas como:  
