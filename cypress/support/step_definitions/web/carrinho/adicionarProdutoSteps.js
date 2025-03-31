@@ -65,7 +65,7 @@ When('adiciono mais de um produto ao carrinho', () => {
   });
 });
   
-Then('valido que os produtos selecionados estao no carrinho', () => {
+Then('valido que o produto selecionado esta no carrinho', () => {
     cy.acessarCarrinho();
   
     cy.get('#cart-list .cart-item').should('have.length', produtosSelecionados.length)

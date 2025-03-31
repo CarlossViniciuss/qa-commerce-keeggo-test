@@ -17,7 +17,7 @@ Cenário: Adicionar um produto ao carrinho efetuando o checkout com sucesso
 Cenário: Adicionar múltiplos produtos ao carrinho 
   Dado que estou na página inicial
   Quando adiciono mais de um produto ao carrinho
-  Então valido que os produtos selecionados estao no carrinho
+  Então valido que o produto selecionado esta no carrinho
   E as informações de cada produto devem ser exibidas corretamente
 
 @regressao @carrinho-vazio
