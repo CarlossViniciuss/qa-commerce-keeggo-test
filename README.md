@@ -52,12 +52,13 @@ Este repositório contém a automação de testes desenvolvida com **Cypress**, 
 - Node.js (recomendado: versão LTS)
 - npm
 - Git
+- Executar o projeto: https://github.com/Keeggo-Technology-Brasil-SA/qa-commerce
 
 ### 🔧 Instalação
 
 ```bash
-git clone https://github.com/SEU GITHUB/qa-commerce-keeggo-test.git
-cd nome-do-repo
+git clone https://github.com/CarlossViniciuss/qa-commerce-keeggo-test.git
+cd qa-commerce-keeggo-test
 npm install
 ```
 
